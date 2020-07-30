@@ -15,28 +15,49 @@ def button_clear():
     e.delete(0, END)
 
 def button_equal():
-    second_number = e.get()
-    e.delete(0, END)
-    e.insert(0, f_num + int(second_number))
-# all buttons currently add numbers together because the functions are identical and button_equal only adds
+    if math == "addition":
+        second_number = e.get()
+        e.delete(0, END)
+        e.insert(0, f_num + int(second_number))
+    elif math == "subtraction":
+        second_number = e.get()
+        e.delete(0, END)
+        e.insert(0, f_num - int(second_number))
+    elif math == "multiplication":
+        second_number = e.get()
+        e.delete(0, END)
+        e.insert(0, f_num * int(second_number))
+    elif math == "division":
+        second_number = e.get()
+        e.delete(0, END)
+        e.insert(0, f_num / int(second_number))
+
 def button_add():
     first_number = e.get()
     global f_num
+    global math
+    math="addition"
     f_num = int(first_number)
     e.delete(0,END)
 def button_subtract():
     first_number = e.get()
     global f_num
+    global math
+    math="subtraction"
     f_num = int(first_number)
     e.delete(0, END)
 def button_multiply():
     first_number = e.get()
     global f_num
+    global math
+    math="multiplication"
     f_num = int(first_number)
     e.delete(0,END)
 def button_divide():
     first_number = e.get()
     global f_num
+    global math
+    math="division"
     f_num = int(first_number)
     e.delete(0,END)
 
