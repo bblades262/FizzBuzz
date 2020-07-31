@@ -76,5 +76,3 @@ dividebutton = Button(root, text="/", height=3, width=5, command=button_divide).
 
 
 root.mainloop()
-
-
